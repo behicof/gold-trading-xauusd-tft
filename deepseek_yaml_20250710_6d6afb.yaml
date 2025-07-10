@@ -1,0 +1,19 @@
+name: Live Trading Execution
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # اجرای هر 5 دقیقه
+
+jobs:
+  execute-trading:
+    runs-on: ubuntu-latest
+    container:
+      image: gold-trading-system:latest
+      
+    steps:
+    - name: Run Trading System
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        python src/live_trading.py

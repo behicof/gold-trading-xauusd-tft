@@ -1,0 +1,19 @@
+gold-trading-xauusd-tft/
+├── .github/
+│   └── workflows/
+│       ├── ci-cd.yml          # اتوماسیون تست و استقرار
+│       └── live-trading.yml   # اجرای برنامه معاملاتی
+├── src/
+│   ├── data_processing.py     # پیش‌پردازش داده‌ها
+│   ├── model_tft.py           # مدل Temporal Fusion Transformer
+│   ├── live_trading.py        # سیستم معاملات زنده
+│   └── utils.py               # ابزارهای کمکی
+├── docker/
+│   ├── Dockerfile             # پیکربندی داکر
+│   └── requirements.txt       # وابستگی‌های پایتون
+├── config/
+│   ├── settings.py            # تنظیمات API
+│   └── telegram_alerts.py     # پیکربندی هشدارها
+├── docs/                      # مستندات فنی
+├── .gitignore
+└── README.md                  # راهنمای اجرا
